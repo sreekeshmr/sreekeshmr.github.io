@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Software Engineer</title>
+    <title>Sreekesh M R - Full Stack Developer</title>
     <style>
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --light-bg: #f9f9f9;
-            --text-color: #333;
-            --accent-color: #e74c3c;
+            --primary-color: #5e81ac;
+            --secondary-color: #2e3440;
+            --light-bg: #3b4252;
+            --text-color: #eceff4;
+            --accent-color: #88c0d0;
+            --card-bg: #434c5e;
+            --hover-color: #81a1c1;
         }
         
         * {
@@ -23,6 +25,7 @@
         body {
             color: var(--text-color);
             line-height: 1.6;
+            background-color: #2e3440;
         }
         
         header {
@@ -30,6 +33,7 @@
             color: white;
             padding: 2rem 0;
             text-align: center;
+            border-bottom: 3px solid var(--accent-color);
         }
         
         .container {
@@ -61,7 +65,7 @@
         }
         
         nav ul li a:hover {
-            color: #ecf0f1;
+            color: var(--secondary-color);
             text-decoration: underline;
         }
         
@@ -79,7 +83,7 @@
         
         h2 {
             text-align: center;
-            color: var(--primary-color);
+            color: var(--accent-color);
             margin-bottom: 2rem;
         }
         
@@ -95,7 +99,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
-            border: 3px solid white;
+            border: 3px solid var(--accent-color);
         }
         
         .social-links {
@@ -107,6 +111,10 @@
             margin: 0 0.5rem;
             color: white;
             text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent-color);
         }
         
         .about-content {
@@ -131,15 +139,16 @@
         }
         
         .skill-category {
-            background: white;
+            background: var(--card-bg);
             border-radius: 8px;
             padding: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             flex: 1 1 250px;
+            border-left: 3px solid var(--accent-color);
         }
         
         .skill-category h3 {
-            color: var(--primary-color);
+            color: var(--accent-color);
             margin-bottom: 1rem;
             text-align: center;
         }
@@ -151,10 +160,15 @@
         }
         
         .skill-item {
-            background: var(--light-bg);
+            background: var(--secondary-color);
             padding: 0.5rem 1rem;
             border-radius: 20px;
             font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            background: var(--primary-color);
         }
         
         .projects-grid {
@@ -166,11 +180,12 @@
         }
         
         .project-card {
-            background: white;
+            background: var(--card-bg);
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
+            border-top: 3px solid var(--accent-color);
         }
         
         .project-card:hover {
@@ -195,7 +210,7 @@
         }
         
         .project-tag {
-            background: var(--light-bg);
+            background: var(--secondary-color);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -207,13 +222,14 @@
         }
         
         .project-links a {
-            color: var(--primary-color);
+            color: var(--accent-color);
             text-decoration: none;
             font-weight: 500;
         }
         
         .project-links a:hover {
             text-decoration: underline;
+            color: var(--hover-color);
         }
         
         .experience-timeline {
@@ -236,6 +252,10 @@
             margin-left: 2rem;
             padding-bottom: 2rem;
             position: relative;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
         }
         
         .experience-item::before {
@@ -244,14 +264,14 @@
             width: 15px;
             height: 15px;
             border-radius: 50%;
-            background: var(--primary-color);
+            background: var(--accent-color);
             left: -2.5rem;
             top: 0.5rem;
         }
         
         .experience-date {
             font-weight: bold;
-            color: var(--primary-color);
+            color: var(--accent-color);
             margin-bottom: 0.3rem;
         }
         
@@ -289,8 +309,10 @@
         .form-group textarea {
             width: 100%;
             padding: 0.8rem;
-            border: 1px solid #ddd;
+            border: 1px solid var(--primary-color);
             border-radius: 4px;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
         }
         
         .form-group textarea {
@@ -310,7 +332,7 @@
         }
         
         button:hover {
-            background: #2980b9;
+            background: var(--hover-color);
         }
         
         footer {
@@ -318,6 +340,56 @@
             color: white;
             padding: 2rem 0;
             text-align: center;
+            border-top: 3px solid var(--accent-color);
+        }
+        
+        .education-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .education-item {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border-left: 3px solid var(--accent-color);
+        }
+        
+        .education-year {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        .education-degree {
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        
+        .education-school {
+            font-style: italic;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--card-bg);
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+        }
+        
+        .contact-item i {
+            color: var(--accent-color);
         }
         
         @media (max-width: 768px) {
@@ -348,17 +420,17 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container hero-content">
-            <img src="/api/placeholder/150/150" alt="Your Profile Picture" class="profile-img">
-            <h1>Your Name</h1>
-            <p>Software Engineer | Web Developer | Problem Solver</p>
+            <img src="/api/placeholder/150/150" alt="Sreekesh M R" class="profile-img">
+            <h1>Sreekesh M R</h1>
+            <p>Full Stack Developer | Angular | Node.js | Flutter</p>
             <div class="social-links">
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-                <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a> |
-                <a href="mailto:your.email@example.com">Email</a>
+                <a href="https://linkedin.com/in/sreekeshmr/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a> |
+                <a href="mailto:sreekeshmr@gmail.com"><i class="far fa-envelope"></i> Email</a>
             </div>
         </div>
     </header>
@@ -368,8 +440,9 @@
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -381,9 +454,9 @@
                 <h2>About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Hello! I'm a passionate software engineer with X years of experience specializing in [your focus areas]. I enjoy solving complex problems and building user-friendly applications that make a difference.</p>
-                        <p>My background in [relevant background] has equipped me with a unique perspective on [specific advantage]. I'm constantly learning new technologies and methodologies to enhance my skills and deliver high-quality solutions.</p>
-                        <p>When I'm not coding, you can find me [your hobbies or interests], which help me maintain a balanced approach to problem-solving and creativity.</p>
+                        <p>Passionate Software Developer with a Master's in Computer Science and over 3 years of experience crafting web applications. I specialize in creating intuitive, high-quality web applications using Angular, Node.js, and MySQL.</p>
+                        <p>My background in Computer Science and Mathematics has equipped me with a unique perspective on problem-solving and analytical thinking. I'm constantly learning new technologies and methodologies to enhance my skills and deliver high-quality solutions.</p>
+                        <p>Based in Kochi, India, I'm driven by a passion for continuous learning and innovation in software development.</p>
                     </div>
                 </div>
             </div>
@@ -394,119 +467,42 @@
                 <h2>Skills & Expertise</h2>
                 <div class="skills-container">
                     <div class="skill-category">
-                        <h3>Languages</h3>
-                        <div class="skill-list">
-                            <span class="skill-item">JavaScript</span>
-                            <span class="skill-item">TypeScript</span>
-                            <span class="skill-item">Python</span>
-                            <span class="skill-item">Java</span>
-                            <span class="skill-item">C#</span>
-                            <span class="skill-item">SQL</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3>Frontend</h3>
-                        <div class="skill-list">
-                            <span class="skill-item">React</span>
-                            <span class="skill-item">Vue.js</span>
-                            <span class="skill-item">Angular</span>
-                            <span class="skill-item">HTML5</span>
-                            <span class="skill-item">CSS3/SASS</span>
-                            <span class="skill-item">Tailwind CSS</span>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3>Backend</h3>
+                        <h3>Technologies</h3>
                         <div class="skill-list">
                             <span class="skill-item">Node.js</span>
-                            <span class="skill-item">Express</span>
+                            <span class="skill-item">Angular</span>
+                            <span class="skill-item">Flutter</span>
                             <span class="skill-item">Django</span>
-                            <span class="skill-item">Flask</span>
-                            <span class="skill-item">Spring Boot</span>
-                            <span class="skill-item">ASP.NET</span>
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">JavaScript</span>
                         </div>
                     </div>
                     
                     <div class="skill-category">
                         <h3>Databases</h3>
                         <div class="skill-list">
+                            <span class="skill-item">MySQL</span>
                             <span class="skill-item">MongoDB</span>
                             <span class="skill-item">PostgreSQL</span>
-                            <span class="skill-item">MySQL</span>
-                            <span class="skill-item">Redis</span>
-                            <span class="skill-item">Firebase</span>
                         </div>
                     </div>
                     
                     <div class="skill-category">
-                        <h3>DevOps & Tools</h3>
+                        <h3>Tools & Others</h3>
                         <div class="skill-list">
-                            <span class="skill-item">Git</span>
+                            <span class="skill-item">GIT</span>
                             <span class="skill-item">Docker</span>
-                            <span class="skill-item">Kubernetes</span>
-                            <span class="skill-item">AWS</span>
-                            <span class="skill-item">CI/CD</span>
-                            <span class="skill-item">Jira</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section id="projects">
-            <div class="container">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="/api/placeholder/400/180" alt="Project 1" class="project-img">
-                        <div class="project-content">
-                            <h3>Project Name 1</h3>
-                            <p>A brief description of the project, its purpose, and the problems it solves. Highlight your role and key contributions.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">React</span>
-                                <span class="project-tag">Node.js</span>
-                                <span class="project-tag">MongoDB</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank">View Demo</a>
-                                <a href="#" target="_blank">Source Code</a>
-                            </div>
+                            <span class="skill-item">AWS S3</span>
+                            <span class="skill-item">Socket.IO</span>
+                            <span class="skill-item">RESTful APIs</span>
                         </div>
                     </div>
                     
-                    <div class="project-card">
-                        <img src="/api/placeholder/400/180" alt="Project 2" class="project-img">
-                        <div class="project-content">
-                            <h3>Project Name 2</h3>
-                            <p>A brief description of the project, its purpose, and the problems it solves. Highlight your role and key contributions.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Vue.js</span>
-                                <span class="project-tag">Express</span>
-                                <span class="project-tag">PostgreSQL</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank">View Demo</a>
-                                <a href="#" target="_blank">Source Code</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-card">
-                        <img src="/api/placeholder/400/180" alt="Project 3" class="project-img">
-                        <div class="project-content">
-                            <h3>Project Name 3</h3>
-                            <p>A brief description of the project, its purpose, and the problems it solves. Highlight your role and key contributions.</p>
-                            <div class="project-tags">
-                                <span class="project-tag">Angular</span>
-                                <span class="project-tag">Django</span>
-                                <span class="project-tag">MySQL</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" target="_blank">View Demo</a>
-                                <a href="#" target="_blank">Source Code</a>
-                            </div>
+                    <div class="skill-category">
+                        <h3>Languages</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">English</span>
+                            <span class="skill-item">Malayalam</span>
                         </div>
                     </div>
                 </div>
@@ -518,36 +514,102 @@
                 <h2>Professional Experience</h2>
                 <div class="experience-timeline">
                     <div class="experience-item">
-                        <div class="experience-date">Jan 2023 - Present</div>
-                        <div class="experience-position">Senior Software Engineer</div>
-                        <div class="experience-company">Company Name, Location</div>
+                        <div class="experience-date">February 2025 - Present</div>
+                        <div class="experience-position">Full Stack Developer</div>
+                        <div class="experience-company">UFS Technologies, Infopark, Kochi</div>
                         <ul>
-                            <li>Accomplishment or responsibility 1</li>
-                            <li>Accomplishment or responsibility 2</li>
-                            <li>Accomplishment or responsibility 3</li>
+                            <li>Developing and maintaining scalable, user-centric CRM solutions using Angular, Node.js, and MySQL</li>
+                            <li>Designing and implementing seamless front-end and back-end communication with RESTful APIs</li>
+                            <li>Collaborating with cross-functional teams using version control (GIT) for efficient project management</li>
+                            <li>Working with AWS S3 for data storage and management</li>
                         </ul>
                     </div>
                     
                     <div class="experience-item">
-                        <div class="experience-date">Mar 2020 - Dec 2022</div>
-                        <div class="experience-position">Software Engineer</div>
-                        <div class="experience-company">Company Name, Location</div>
+                        <div class="experience-date">February 2022 - January 2025</div>
+                        <div class="experience-position">Flutter Developer (Internship & Upskilling)</div>
+                        <div class="experience-company">Zoople Technologies, Kochi</div>
                         <ul>
-                            <li>Accomplishment or responsibility 1</li>
-                            <li>Accomplishment or responsibility 2</li>
-                            <li>Accomplishment or responsibility 3</li>
+                            <li>Underwent hands-on training in Flutter development for cross-platform mobile applications</li>
+                            <li>Focused on state management and API integration to build scalable and user-friendly applications</li>
+                            <li>Gained practical experience in mobile app development lifecycle</li>
                         </ul>
                     </div>
                     
                     <div class="experience-item">
-                        <div class="experience-date">Jun 2018 - Feb 2020</div>
-                        <div class="experience-position">Junior Developer</div>
-                        <div class="experience-company">Company Name, Location</div>
+                        <div class="experience-date">August 2020 - March 2021</div>
+                        <div class="experience-position">Python Django Web Developer</div>
+                        <div class="experience-company">WahyLab Solutions, Kochi</div>
                         <ul>
-                            <li>Accomplishment or responsibility 1</li>
-                            <li>Accomplishment or responsibility 2</li>
-                            <li>Accomplishment or responsibility 3</li>
+                            <li>Completed an 8-month hands-on training program on a live project</li>
+                            <li>Developed and maintained Django web applications with focus on functionality and code efficiency</li>
+                            <li>Applied best practices in web development while bridging theoretical knowledge with real-world applications</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-container">
+                    <div class="education-item">
+                        <div class="education-year">2018 - 2020</div>
+                        <div class="education-degree">M.Sc Computer Science</div>
+                        <div class="education-school">STAS, EDAPPALLY</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-year">2013 - 2016</div>
+                        <div class="education-degree">B.Sc Mathematics</div>
+                        <div class="education-school">SH COLLEGE, THEVARA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="/api/placeholder/400/180" alt="CRM Application" class="project-img">
+                        <div class="project-content">
+                            <h3>CRM Web Application</h3>
+                            <p>Developed a comprehensive Customer Relationship Management system with robust user management, analytics, and reporting features.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Angular</span>
+                                <span class="project-tag">Node.js</span>
+                                <span class="project-tag">MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <img src="/api/placeholder/400/180" alt="Mobile App" class="project-img">
+                        <div class="project-content">
+                            <h3>Cross-Platform Mobile Application</h3>
+                            <p>Built a Flutter-based mobile application that works seamlessly across iOS and Android platforms with integrated API services.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Flutter</span>
+                                <span class="project-tag">Firebase</span>
+                                <span class="project-tag">RESTful API</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <img src="/api/placeholder/400/180" alt="Django Project" class="project-img">
+                        <div class="project-content">
+                            <h3>Django Web Portal</h3>
+                            <p>Created a content management system with Django featuring user authentication, role-based access control, and dynamic content management.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Django</span>
+                                <span class="project-tag">PostgreSQL</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -558,8 +620,25 @@
                 <h2>Get In Touch</h2>
                 <div class="contact-content">
                     <p>I'm always open to discussing new projects, opportunities, or partnerships. Feel free to reach out!</p>
-                    <p>📧 <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                    <p>📱 (123) 456-7890</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:sreekeshmr@gmail.com">sreekeshmr@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91-9995610336</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kochi, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://linkedin.com/in/sreekeshmr/" target="_blank">linkedin.com/in/sreekeshmr/</a>
+                        </div>
+                    </div>
                     
                     <div class="contact-form">
                         <form id="contactForm">
@@ -588,7 +667,7 @@
     
     <footer>
         <div class="container">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 Sreekesh M R. All rights reserved.</p>
         </div>
     </footer>
     
